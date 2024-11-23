@@ -1,27 +1,181 @@
+/* Base styles */
 body {
-   font-family: Arial, sans-serif;
-   margin: 20px;
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: var(--bg-color, #f9f9f9);
+   color: var(--text-color, #333);
+   line-height: 1.6;
+}
+
+h1, h2, h3 {
+   color: var(--text-color, #222);
+   margin-bottom: 10px;
 }
 
 h1 {
-   color: #333;
+   font-size: 2.5em;
+   border-bottom: 2px solid #4CAF50;
+   padding-bottom: 5px;
+   display: inline-block;
 }
 
-nav {
-   margin-bottom: 20px;
+a {
+   color: #4CAF50;
+   text-decoration: none;
+   transition: color 0.3s;
 }
 
-nav ul {
-   list-style: none;
-   padding: 0;
+a:hover {
+   color: #3c9e44;
 }
 
-nav ul li {
-   display: inline;
-   margin-right: 10px;
+/* Navbar */
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #4CAF50;
+   padding: 10px 20px;
+   color: white;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-form {
-   margin-top: 20px;
+.navbar a {
+   color: white;
+   text-decoration: none;
+   margin: 0 10px;
+   font-weight: bold;
+   transition: color 0.3s;
+}
+
+.navbar a:hover {
+   color: #ddd;
+}
+
+/* Buttons */
+button {
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   padding: 10px 20px;
+   cursor: pointer;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease;
+}
+
+button:hover {
+   background-color: #45a049;
+   transform: scale(1.05);
+}
+
+/* Input Fields */
+input[type="text"], textarea {
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+   transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+   border-color: #4CAF50;
+   outline: none;
+}
+
+/* Cards */
+.card {
+   background-color: var(--card-bg, #fff);
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   margin: 10px 0;
+   transition: transform 0.2s;
+}
+
+.card:hover {
+   transform: translateY(-5px);
+}
+
+/* Container */
+.container {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background: var(--bg-color, #f9f9f9);
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+   text-align: center;
+   padding: 10px;
+   background-color: #4CAF50;
+   color: white;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .container {
+       padding: 10px;
+   }
+
+   .navbar {
+       flex-direction: column;
+       align-items: flex-start;
+   }
+
+   .navbar a {
+       margin: 5px 0;
+   }
+}
+
+/* Dark Mode */
+:root {
+   --bg-color: #f9f9f9;
+   --text-color: #333;
+   --card-bg: #fff;
+}
+
+body.dark-mode {
+   --bg-color: #222;
+   --text-color: #ddd;
+   --card-bg: #333;
+}
+
+body {
+   background-color: var(--bg-color);
+   color: var(--text-color);
+   transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+   background-color: var(--card-bg);
+}
+/* 粒子背景样式 */
+#particles-js {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: #282c34; /* 背景底色 */
+   z-index: -1; /* 确保粒子在内容后面 */
+   top: 0;
+   left: 0;
+}
+
+/* 内容容器样式 */
+.content {
+   position: relative;
+   z-index: 1;
+   color: white;
+   text-align: center;
+   padding: 100px 20px;
 }
 
