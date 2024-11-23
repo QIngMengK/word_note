@@ -1,0 +1,18 @@
+{
+    "words": [
+        {
+            "word": "apple",
+            "translation": "苹果"
+        },
+        {
+            "word": "banana",
+            "translation": "香蕉"
+        },
+        {
+            "word": "a",
+            "translation": "一个"
+        }
+    ],
+    "wrong_words": [],
+    "review_words": []
+}

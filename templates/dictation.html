@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听写练习</title>
+</head>
+<body>
+    <h1>听写练习</h1>
+    <form action="{{ url_for('dictation') }}" method="POST">
+        {% for word, translation in dictation_data.items() %}
+        <label for="{{ word }}">{{ word }}:</label>
+        <input type="text" id="{{ word }}" name="{{ word }}" placeholder="输入翻译"><br><br>
+        {% endfor %}
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>
+
